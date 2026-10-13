@@ -3,270 +3,222 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Candy Lab — Dulcería americana en Colombia</title>
+  <title>Candy Lab — Los dulces más antojados de USA</title>
   <meta name="description" content="Gomitas, chocolates, creamers y snacks importados de Estados Unidos. Compra en línea y te llega a cualquier ciudad de Colombia.">
-  <meta name="theme-color" content="#fff8f1">
+  <meta name="theme-color" content="#efc0e2">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
-  <link rel="preload" href="assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/pacifico.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <!-- Bordes derretidos -->
+    <symbol id="drip-a" viewBox="0 0 1440 140" preserveAspectRatio="none"><path fill="currentColor" d="M0 0H1440V34Q1412 31 1383 34C1373 47 1373 88 1373 129A13 13 0 0 1 1347 129C1347 88 1347 47 1337 34Q1250 37 1163 34C1153 41 1153 63 1153 79A13 13 0 0 1 1127 79C1127 63 1127 41 1117 34Q1078 40 1040 34C1018 45 1018 79 1018 106A18 18 0 0 1 982 106C982 79 982 45 960 34Q936 31 913 34C903 47 903 88 903 129A13 13 0 0 1 877 129C877 88 877 47 867 34Q753 28 639 34C626 47 626 88 626 126A16 16 0 0 1 594 126C594 88 594 47 581 34Q536 37 490 34C468 40 468 57 468 62A18 18 0 0 1 432 62C432 57 432 40 410 34Q348 31 285 34C268 40 268 57 268 62A18 18 0 0 1 232 62C232 57 232 40 215 34Q200 28 184 34C173 47 173 88 173 129A13 13 0 0 1 147 129C147 88 147 47 136 34Q68 38 0 34Z"/></symbol>
+    <symbol id="drip-b" viewBox="0 0 1440 140" preserveAspectRatio="none"><path fill="currentColor" d="M0 0H1440V34Q1378 37 1316 34C1298 41 1298 63 1298 74A18 18 0 0 1 1262 74C1262 63 1262 41 1244 34Q1204 40 1165 34C1154 40 1154 57 1154 66A14 14 0 0 1 1126 66C1126 57 1126 40 1115 34Q1076 40 1036 34C1024 40 1024 57 1024 66A14 14 0 0 1 996 66C996 57 996 40 984 34Q904 31 823 34C808 40 808 57 808 62A18 18 0 0 1 772 62C772 57 772 40 757 34Q707 31 657 34C638 40 638 57 638 62A18 18 0 0 1 602 62C602 57 602 40 583 34Q572 28 562 34C548 47 548 88 548 124A18 18 0 0 1 512 124C512 88 512 47 498 34Q487 40 476 34C458 40 458 57 458 62A18 18 0 0 1 422 62C422 57 422 40 404 34Q340 31 275 34C258 45 258 79 258 106A18 18 0 0 1 222 106C222 79 222 45 205 34Q152 28 99 34C86 40 86 57 86 64A16 16 0 0 1 54 64C54 57 54 40 41 34Q20 38 0 34Z"/></symbol>
+    <!-- Íconos -->
     <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
     <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.8 20a7.2 7.2 0 0 1 14.4 0"/></symbol>
     <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5.5 8.5h13l-1 11.2a1.8 1.8 0 0 1-1.8 1.6H8.3a1.8 1.8 0 0 1-1.8-1.6z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
     <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
-    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2.8 6.5h10.4v9.8H2.8z"/><path d="M13.2 9.8h3.9l3.1 3.3v3.2h-7"/><circle cx="6.8" cy="17.6" r="1.9"/><circle cx="16.6" cy="17.6" r="1.9"/></symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 5 6.2v5.3c0 4.4 3 7.9 7 9 4-1.1 7-4.6 7-9V6.2z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
-    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5c.8 4.6 2.5 6.3 7 7-4.5.8-6.2 2.5-7 7-.8-4.5-2.5-6.2-7-7 4.5-.7 6.2-2.4 7-7z"/></symbol>
-    <symbol id="i-gift" viewBox="0 0 24 24"><path d="M4 10h16v3.2H4zM5.5 13.2h13V20h-13zM12 10v10"/><path d="M12 10c-1-3.4-5.4-4.4-5.4-1.7 0 1.4 2 1.7 5.4 1.7zM12 10c1-3.4 5.4-4.4 5.4-1.7 0 1.4-2 1.7-5.4 1.7z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="m7 7 10 10M17 7 7 17"/></symbol>
     <symbol id="i-chat" viewBox="0 0 24 24"><path d="M12 3.8a8.2 8.2 0 0 0-7.1 12.3L3.8 20.2l4.2-1.1A8.2 8.2 0 1 0 12 3.8z"/></symbol>
-    <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 3.6 8 4.2v8.4l-8 4.2-8-4.2V7.8z"/><path d="m4 7.8 8 4.2 8-4.2M12 12v8.4"/></symbol>
+    <!-- Íconos de sellos -->
+    <symbol id="s-plane" viewBox="0 0 48 48"><path d="M6 27l36-14-10 26-7-10-9 5 3-9z"/><path d="M25 29l17-16"/></symbol>
+    <symbol id="s-star" viewBox="0 0 48 48"><path d="M24 7c1.6 9.4 5.6 13.4 15 15-9.4 1.6-13.4 5.6-15 15-1.6-9.4-5.6-13.4-15-15 9.4-1.6 13.4-5.6 15-15z"/></symbol>
+    <symbol id="s-candy" viewBox="0 0 48 48"><rect x="15" y="16" width="18" height="16" rx="8"/><path d="M15 24 6 17v14zM33 24l9-7v14z"/><path d="M21 17l-2 14M27 17l-2 14"/></symbol>
+    <symbol id="s-truck" viewBox="0 0 48 48"><path d="M5 13h21v19H5z"/><path d="M26 19h8l6 7v6H26"/><circle cx="13" cy="35" r="4"/><circle cx="33" cy="35" r="4"/></symbol>
+    <symbol id="s-gift" viewBox="0 0 48 48"><path d="M8 20h32v7H8zM11 27h26v14H11zM24 20v21"/><path d="M24 20c-2-7-11-9-11-3.5 0 3 4 3.5 11 3.5zM24 20c2-7 11-9 11-3.5 0 3-4 3.5-11 3.5z"/></symbol>
   </svg>
 
   <a class="skip" href="#main">Saltar al contenido</a>
 
-  <div class="announce">
-    <p>Envíos a toda Colombia desde Barranquilla <span aria-hidden="true">·</span> Todo importado de EE. UU.</p>
-  </div>
-
-  <header class="header" id="top">
-    <div class="container header__in">
-      <button class="icon-btn header__menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
-        <svg class="icon"><use href="#i-menu"/></svg>
-      </button>
-      <a class="header__logo" href="#top" aria-label="Candy Lab, inicio">
-        <img src="assets/img/candy-lab-wordmark.png" alt="Candy Lab" width="480" height="277">
-      </a>
-      <nav class="nav" id="nav" aria-label="Principal">
-        <a href="#tienda">Tienda</a>
-        <a href="#mas-pedidos">Lo nuevo</a>
-        <a href="#categorias">Gomitas</a>
-        <a href="#categorias">Creamers</a>
-        <a href="#pick-mix">Pick &amp; Mix</a>
-        <a href="#regalos">Regalos</a>
-      </nav>
-      <div class="header__tools">
-        <button class="icon-btn" type="button" aria-label="Buscar"><svg class="icon"><use href="#i-search"/></svg></button>
-        <button class="icon-btn hide-sm" type="button" aria-label="Mi cuenta"><svg class="icon"><use href="#i-user"/></svg></button>
-        <button class="icon-btn cart" type="button" aria-label="Carrito, 0 productos">
-          <svg class="icon"><use href="#i-bag"/></svg>
-          <span class="cart__count" hidden>0</span>
+  <!-- Hero -->
+  <section class="hero" id="top" style="--hero-bg: #efc0e2">
+    <header class="header">
+      <div class="container header__in">
+        <button class="icon-btn header__menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+          <svg class="icon"><use href="#i-menu"/></svg>
         </button>
+        <a class="header__logo" href="#top" aria-label="Candy Lab, inicio">
+          <img src="assets/img/candy-lab-wordmark.png" alt="Candy Lab" width="480" height="277">
+        </a>
+        <nav class="nav" id="nav" aria-label="Principal">
+          <a href="#favoritos">Tienda</a>
+          <a href="#favoritos">Lo más pedido</a>
+          <a href="#usa">Directo de USA</a>
+          <a href="#vs">Por qué Candy Lab</a>
+          <a href="#encargos">Encargos</a>
+        </nav>
+        <div class="header__tools">
+          <button class="icon-btn hide-sm" type="button" aria-label="Buscar"><svg class="icon"><use href="#i-search"/></svg></button>
+          <button class="icon-btn hide-sm" type="button" aria-label="Mi cuenta"><svg class="icon"><use href="#i-user"/></svg></button>
+          <button class="icon-btn cart" type="button" aria-label="Carrito, 0 productos">
+            <svg class="icon"><use href="#i-bag"/></svg>
+            <span class="cart__count" hidden>0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="hero__stage" id="main">
+      <div class="slides" aria-roledescription="carrusel" aria-label="Destacados">
+        <article class="slide is-active" data-bg="#efc0e2" aria-roledescription="diapositiva" aria-label="1 de 3">
+          <div class="slide__copy">
+            <p class="script">directo de USA</p>
+            <h1 class="hero__title">Los dulces más<br>antojados de USA</h1>
+            <a class="btn" href="#favoritos">Comprar ahora</a>
+          </div>
+          <div class="slide__media"><img src="assets/img/heart-lollipops-wide.jpg" alt="Dos chupetas arcoíris en forma de corazón" width="1600" height="900"></div>
+        </article>
+        <article class="slide" data-bg="#feb8b9" aria-roledescription="diapositiva" aria-label="2 de 3" aria-hidden="true">
+          <div class="slide__copy">
+            <p class="script">suaves y esponjosos</p>
+            <h2 class="hero__title">Marshmallows<br>que no consigues aquí</h2>
+            <a class="btn" href="#favoritos" tabindex="-1">Ver marshmallows</a>
+          </div>
+          <div class="slide__media slide__media--square"><img src="assets/img/marshmallows.jpg" alt="Taza llena de mini marshmallows sobre fondo rosado" width="398" height="398"></div>
+        </article>
+        <article class="slide" data-bg="#f2adc0" aria-roledescription="diapositiva" aria-label="3 de 3" aria-hidden="true">
+          <div class="slide__copy">
+            <p class="script">para regalar</p>
+            <h2 class="hero__title">Detalles dulces<br>para cualquier fecha</h2>
+            <a class="btn" href="#encargos" tabindex="-1">Armar un regalo</a>
+          </div>
+          <div class="slide__media slide__media--square"><img src="assets/img/lollipops-pink.jpg" alt="Dos chupetas blancas con moño sobre fondo rosado" width="398" height="398"></div>
+        </article>
+      </div>
+
+      <div class="sprinkles" aria-hidden="true"></div>
+
+      <button class="arrow arrow--prev" type="button" aria-label="Anterior"><svg class="icon"><use href="#i-left"/></svg></button>
+      <button class="arrow arrow--next" type="button" aria-label="Siguiente"><svg class="icon"><use href="#i-right"/></svg></button>
+
+      <ul class="facts">
+        <li><strong>100%</strong><span>importado de USA</span></li>
+        <li><strong>Envíos</strong><span>a toda Colombia</span></li>
+        <li><strong>Encargos</strong><span>a tu medida</span></li>
+      </ul>
+      <div class="dots" role="tablist" aria-label="Elegir diapositiva">
+        <button type="button" role="tab" aria-selected="true" aria-label="Diapositiva 1"></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Diapositiva 2"></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Diapositiva 3"></button>
       </div>
     </div>
-  </header>
 
-  <main id="main">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero__in">
-        <div class="hero__copy">
-          <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Dulcería americana en Barranquilla</p>
-          <h1 class="hero__title">Los dulces de Estados Unidos, <em>a tu puerta.</em></h1>
-          <p class="hero__lede">Gomitas, chocolates, creamers y snacks que no consigues en Colombia. Los traemos de EE.&nbsp;UU. y te los enviamos a cualquier ciudad del país.</p>
-          <div class="hero__actions">
-            <a class="btn btn--primary btn--lg" href="#mas-pedidos">Comprar ahora</a>
-            <a class="btn btn--ghost btn--lg" href="#categorias">Ver categorías</a>
-          </div>
-          <ul class="trust">
-            <li><svg class="icon"><use href="#i-truck"/></svg>Envíos a toda Colombia</li>
-            <li><svg class="icon"><use href="#i-star"/></svg>100% importado</li>
-            <li><svg class="icon"><use href="#i-shield"/></svg>Pago seguro</li>
-          </ul>
-        </div>
+    <ul class="stamps" aria-label="Lo que nos hace diferentes">
+      <li class="stamp"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><path id="st1" d="M60 60m-45 0a45 45 0 1 1 90 0a45 45 0 1 1-90 0"/></defs><text><textPath href="#st1" textLength="279" lengthAdjust="spacingAndGlyphs">Directo de USA · Directo de USA ·</textPath></text><use href="#s-plane" x="36" y="36" width="48" height="48"/></svg><span class="sr">Directo de USA</span></li>
+      <li class="stamp"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><path id="st2" d="M60 60m-45 0a45 45 0 1 1 90 0a45 45 0 1 1-90 0"/></defs><text><textPath href="#st2" textLength="279" lengthAdjust="spacingAndGlyphs">Edición limitada · Edición limitada ·</textPath></text><use href="#s-star" x="36" y="36" width="48" height="48"/></svg><span class="sr">Ediciones limitadas</span></li>
+      <li class="stamp"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><path id="st3" d="M60 60m-45 0a45 45 0 1 1 90 0a45 45 0 1 1-90 0"/></defs><text><textPath href="#st3" textLength="279" lengthAdjust="spacingAndGlyphs">Sabores únicos · Sabores únicos ·</textPath></text><use href="#s-candy" x="36" y="36" width="48" height="48"/></svg><span class="sr">Sabores únicos</span></li>
+      <li class="stamp"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><path id="st4" d="M60 60m-45 0a45 45 0 1 1 90 0a45 45 0 1 1-90 0"/></defs><text><textPath href="#st4" textLength="279" lengthAdjust="spacingAndGlyphs">Envío nacional · Envío nacional ·</textPath></text><use href="#s-truck" x="36" y="36" width="48" height="48"/></svg><span class="sr">Envío nacional</span></li>
+      <li class="stamp"><svg viewBox="0 0 120 120" aria-hidden="true"><defs><path id="st5" d="M60 60m-45 0a45 45 0 1 1 90 0a45 45 0 1 1-90 0"/></defs><text><textPath href="#st5" textLength="279" lengthAdjust="spacingAndGlyphs">Para regalar · Para regalar ·</textPath></text><use href="#s-gift" x="36" y="36" width="48" height="48"/></svg><span class="sr">Ideal para regalar</span></li>
+    </ul>
 
-        <div class="hero__visual">
-          <div class="hero__blob" aria-hidden="true"></div>
-          <div class="hero__arch">
-            <img src="assets/img/marshmallow-cone.jpg" alt="Mujer sosteniendo un cono gigante de marshmallows de colores" width="800" height="900">
-          </div>
-          <svg class="badge" viewBox="0 0 120 120" aria-hidden="true">
-            <defs><path id="badge-circle" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs>
-            <circle cx="60" cy="60" r="58" class="badge__bg"/>
-            <text class="badge__text"><textPath href="#badge-circle">Importado de USA ✦ Candy Lab ✦ </textPath></text>
-            <path class="badge__star" d="M60 44c1.3 7.6 4.4 10.7 12 12-7.6 1.3-10.7 4.4-12 12-1.3-7.6-4.4-10.7-12-12 7.6-1.3 10.7-4.4 12-12z"/>
-          </svg>
-          <a class="peek" href="#mas-pedidos">
-            <img src="assets/img/gummy-bears.jpg" alt="" width="64" height="64">
-            <span>
-              <small>Lo más pedido</small>
-              <strong>Ositos de goma clásicos</strong>
-              <span class="peek__price">$18.900</span>
-            </span>
-          </a>
-        </div>
-      </div>
-    </section>
+    <svg class="drip" aria-hidden="true"><use href="#drip-a"/></svg>
+  </section>
 
-    <!-- Cinta -->
-    <div class="ribbon" aria-hidden="true">
-      <div class="ribbon__track">
-        <span>Gomitas</span><i>✦</i><span>Chocolates</span><i>✦</i><span>Creamers</span><i>✦</i><span>Marshmallows</span><i>✦</i><span>Snacks</span><i>✦</i><span>Ediciones de temporada</span><i>✦</i>
-      </div>
-    </div>
-
-    <!-- Categorías -->
-    <section class="section" id="categorias">
+  <main>
+    <!-- Favoritos -->
+    <section class="favs" id="favoritos">
       <div class="container">
-        <div class="section__head">
-          <div>
-            <p class="eyebrow">Categorías</p>
-            <h2 class="section__title">Compra por antojo</h2>
-          </div>
-          <a class="link" href="#tienda">Ver toda la tienda <svg class="icon"><use href="#i-arrow"/></svg></a>
-        </div>
-        <ul class="cats" id="tienda">
-          <li><a class="cat" href="#mas-pedidos"><span class="cat__img"><img src="assets/img/gummies-white.jpg" alt="" loading="lazy" width="398" height="398"></span><span class="cat__name">Gomitas</span></a></li>
-          <li><a class="cat" href="#mas-pedidos"><span class="cat__img"><img src="assets/img/lollipops-pink.jpg" alt="" loading="lazy" width="398" height="398"></span><span class="cat__name">Chupetas</span></a></li>
-          <li><a class="cat" href="#mas-pedidos"><span class="cat__img"><img src="assets/img/marshmallows.jpg" alt="" loading="lazy" width="398" height="398"></span><span class="cat__name">Marshmallows</span></a></li>
-          <li><a class="cat" href="#mas-pedidos"><span class="cat__img"><img src="assets/img/pink-mug.jpg" alt="" loading="lazy" width="398" height="398"></span><span class="cat__name">Creamers</span></a></li>
-          <li><a class="cat" href="#mas-pedidos"><span class="cat__img"><img src="assets/img/candy-corn.jpg" alt="" loading="lazy" width="398" height="398"></span><span class="cat__name">Temporada</span></a></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Más pedidos -->
-    <section class="section section--tint" id="mas-pedidos">
-      <div class="container">
-        <div class="section__head">
-          <div>
-            <p class="eyebrow">Favoritos de la casa</p>
-            <h2 class="section__title">Los más pedidos</h2>
-          </div>
-          <a class="link" href="#tienda">Ver todo <svg class="icon"><use href="#i-arrow"/></svg></a>
-        </div>
+        <header class="head">
+          <p class="script">los favoritos</p>
+          <h2 class="title">Nuestros más pedidos</h2>
+        </header>
         <div class="products">
           <article class="product">
-            <div class="product__media">
-              <img src="assets/img/gummy-bears.jpg" alt="Ositos de goma de colores" loading="lazy" width="398" height="398">
-              <span class="tag tag--cherry">Más vendido</span>
-            </div>
-            <div class="product__body">
-              <p class="product__cat">Gomitas · 500 g</p>
-              <h3 class="product__name">Ositos de goma clásicos</h3>
-              <div class="product__foot">
-                <span class="price">$18.900</span>
-                <button class="btn btn--primary btn--sm" type="button" data-add="Ositos de goma clásicos"><svg class="icon"><use href="#i-plus"/></svg>Agregar</button>
-              </div>
-            </div>
+            <div class="product__img"><img src="assets/img/gummy-bears.jpg" alt="Ositos de goma de colores" loading="lazy" width="398" height="398"><span class="tag">Más vendido</span></div>
+            <h3 class="product__name">Ositos de goma clásicos</h3>
+            <p class="product__meta">Gomitas · Bolsa de 500 g</p>
+            <p class="product__price">$18.900</p>
+            <button class="btn btn--sm btn--cherry" type="button" data-add="Ositos de goma clásicos">Agregar</button>
           </article>
           <article class="product">
-            <div class="product__media">
-              <img src="assets/img/iced-latte.jpg" alt="Café helado con creamer" loading="lazy" width="398" height="398">
-              <span class="tag tag--blue">Importado</span>
-            </div>
-            <div class="product__body">
-              <p class="product__cat">Creamers · 828 ml</p>
-              <h3 class="product__name">Creamer Caramel Macchiato</h3>
-              <div class="product__foot">
-                <span class="price">$42.900</span>
-                <button class="btn btn--primary btn--sm" type="button" data-add="Creamer Caramel Macchiato"><svg class="icon"><use href="#i-plus"/></svg>Agregar</button>
-              </div>
-            </div>
+            <div class="product__img"><img src="assets/img/iced-latte.jpg" alt="Café helado con creamer" loading="lazy" width="398" height="398"><span class="tag tag--blue">Importado</span></div>
+            <h3 class="product__name">Creamer Caramel Macchiato</h3>
+            <p class="product__meta">Creamers · 828 ml</p>
+            <p class="product__price">$42.900</p>
+            <button class="btn btn--sm btn--cherry" type="button" data-add="Creamer Caramel Macchiato">Agregar</button>
           </article>
           <article class="product">
-            <div class="product__media">
-              <img src="assets/img/heart-lollipop.jpg" alt="Chupeta roja en forma de corazón" loading="lazy" width="398" height="398">
-              <span class="tag tag--lemon">Nuevo</span>
-            </div>
-            <div class="product__body">
-              <p class="product__cat">Dulces · Cereza</p>
-              <h3 class="product__name">Chupeta de corazón</h3>
-              <div class="product__foot">
-                <span class="price">$9.900 <s>$12.900</s></span>
-                <button class="btn btn--primary btn--sm" type="button" data-add="Chupeta de corazón"><svg class="icon"><use href="#i-plus"/></svg>Agregar</button>
-              </div>
-            </div>
+            <div class="product__img"><img src="assets/img/heart-lollipop.jpg" alt="Chupeta roja en forma de corazón" loading="lazy" width="398" height="398"><span class="tag tag--lemon">Nuevo</span></div>
+            <h3 class="product__name">Chupeta de corazón</h3>
+            <p class="product__meta">Dulces · Sabor cereza</p>
+            <p class="product__price">$9.900</p>
+            <button class="btn btn--sm btn--cherry" type="button" data-add="Chupeta de corazón">Agregar</button>
           </article>
         </div>
       </div>
+      <svg class="drip drip--cream" aria-hidden="true"><use href="#drip-b"/></svg>
     </section>
 
-    <!-- Pick & Mix -->
-    <section class="section" id="pick-mix">
-      <div class="container feature">
-        <div class="feature__media">
-          <img src="assets/img/candy-store.jpg" alt="Bandejas de gomitas a granel de muchos colores" loading="lazy" width="1600" height="900">
-        </div>
-        <div class="feature__copy">
-          <p class="eyebrow">Pick &amp; Mix</p>
-          <h2 class="section__title">Arma tu bolsa como en una dulcería americana</h2>
-          <p class="feature__text">Escoge tus gomitas y dulces favoritos a granel y arma una bolsa a tu medida. Perfecta para compartir, regalar o tener a mano.</p>
-          <ol class="steps">
-            <li><span>1</span>Elige el tamaño de tu bolsa</li>
-            <li><span>2</span>Llénala con tus favoritos</li>
-            <li><span>3</span>Te la enviamos a casa</li>
-          </ol>
-          <a class="btn btn--primary btn--lg" href="#mas-pedidos">Armar mi bolsa</a>
+    <!-- Directo de USA -->
+    <section class="usa" id="usa">
+      <div class="usa__photo">
+        <img src="assets/img/candy-store.jpg" alt="Bandejas de gomitas a granel de muchos colores" loading="lazy" width="1600" height="900">
+      </div>
+      <div class="container usa__in">
+        <div class="usa__copy">
+          <p class="script script--blue">traídos directo desde Estados Unidos</p>
+          <h2 class="title title--light">Antojos que no<br>consigues en Colombia</h2>
+          <p>Escogemos cada producto en tiendas de Estados Unidos: gomitas, chocolates, creamers, snacks y ediciones de temporada. Llegan a Barranquilla y de ahí salen a tu casa.</p>
+          <a class="btn btn--light" href="#favoritos">Ver la tienda</a>
         </div>
       </div>
     </section>
 
-    <!-- Valores -->
-    <section class="values" aria-label="Por qué Candy Lab">
-      <div class="container values__in">
-        <div class="value"><span class="value__icon"><svg class="icon"><use href="#i-star"/></svg></span><h3>100% importado</h3><p>Cada producto llega directo de tiendas en Estados Unidos.</p></div>
-        <div class="value"><span class="value__icon"><svg class="icon"><use href="#i-truck"/></svg></span><h3>Envíos a todo el país</h3><p>Despachamos desde Barranquilla a cualquier ciudad de Colombia.</p></div>
-        <div class="value"><span class="value__icon"><svg class="icon"><use href="#i-shield"/></svg></span><h3>Pago seguro</h3><p>Paga en línea con tarjeta, PSE o transferencia.</p></div>
-        <div class="value"><span class="value__icon"><svg class="icon"><use href="#i-box"/></svg></span><h3>Encargos especiales</h3><p>¿Buscas algo puntual? Lo traemos en el próximo pedido.</p></div>
-      </div>
-    </section>
-
-    <!-- Regalos -->
-    <section class="section" id="regalos">
-      <div class="container">
-        <div class="gift">
-          <img class="gift__img" src="assets/img/heart-lollipops-wide.jpg" alt="Dos chupetas arcoíris en forma de corazón sobre fondo rosado" loading="lazy" width="1600" height="900">
-          <div class="gift__copy">
-            <p class="eyebrow">Regalos</p>
-            <h2 class="section__title">Regalos que endulzan cualquier fecha</h2>
-            <p>Cajas armadas para cumpleaños, aniversarios y detalles de oficina, con tarjeta y empaque de regalo.</p>
-            <a class="btn btn--dark btn--lg" href="#regalos"><svg class="icon"><use href="#i-gift"/></svg>Ver regalos</a>
-          </div>
+    <!-- Candy Lab vs lo de siempre -->
+    <section class="vs" id="vs">
+      <div class="container vs__in">
+        <div class="vs__col">
+          <h2 class="vs__title">Candy Lab</h2>
+          <ul class="vs__list">
+            <li><svg class="icon"><use href="#i-check"/></svg>Importado de USA</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Sabores de edición limitada</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Te llega a la casa</li>
+            <li><svg class="icon"><use href="#i-check"/></svg>Encargos a tu medida</li>
+          </ul>
+        </div>
+        <div class="vs__tear" aria-hidden="true"><span>vs</span></div>
+        <div class="vs__col vs__col--them">
+          <h2 class="vs__title">Lo de siempre</h2>
+          <ul class="vs__list">
+            <li><svg class="icon"><use href="#i-x"/></svg>Los mismos dulces</li>
+            <li><svg class="icon"><use href="#i-x"/></svg>Pocos sabores</li>
+            <li><svg class="icon"><use href="#i-x"/></svg>Hay que salir a buscar</li>
+            <li><svg class="icon"><use href="#i-x"/></svg>Lo que haya</li>
+          </ul>
         </div>
       </div>
+      <svg class="drip drip--pink" aria-hidden="true"><use href="#drip-a"/></svg>
     </section>
 
-    <!-- Cierre -->
-    <section class="closing">
-      <div class="container closing__in">
-        <div>
-          <h2 class="closing__title">¿No ves tu favorito?</h2>
-          <p>Escríbenos con el producto que buscas y lo traemos en el próximo pedido desde Estados Unidos.</p>
-        </div>
-        <a class="btn btn--light btn--lg" href="#" data-whatsapp><svg class="icon"><use href="#i-chat"/></svg>Escribir por WhatsApp</a>
+    <!-- Encargos -->
+    <section class="ask" id="encargos">
+      <div class="container ask__in">
+        <p class="script">¿no ves tu favorito?</p>
+        <h2 class="title">Lo traemos en el próximo pedido</h2>
+        <p class="ask__text">Escríbenos con el dulce, creamer o snack que buscas y lo encargamos en Estados Unidos para ti.</p>
+        <a class="btn btn--cherry" href="#" data-whatsapp><svg class="icon"><use href="#i-chat"/></svg>Escribir por WhatsApp</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer__grid">
-      <div class="footer__brand">
-        <img src="assets/img/candy-lab-wordmark.png" alt="Candy Lab" width="480" height="277" loading="lazy">
-        <p>Dulces, creamers y antojos importados de Estados Unidos, con envío a toda Colombia.</p>
-      </div>
-      <div>
-        <h3>Tienda</h3>
-        <ul><li><a href="#categorias">Gomitas</a></li><li><a href="#categorias">Chocolates</a></li><li><a href="#categorias">Creamers</a></li><li><a href="#pick-mix">Pick &amp; Mix</a></li><li><a href="#regalos">Regalos</a></li></ul>
-      </div>
-      <div>
-        <h3>Ayuda</h3>
-        <ul><li><a href="#">Cómo comprar</a></li><li><a href="#">Envíos</a></li><li><a href="#">Preguntas frecuentes</a></li><li><a href="#" data-whatsapp>WhatsApp</a></li></ul>
-      </div>
-      <div>
-        <h3>Candy Lab</h3>
-        <ul><li><a href="#">Nosotros</a></li><li><a href="#">Instagram</a></li><li><a href="#">Términos y condiciones</a></li></ul>
-      </div>
-    </div>
-    <div class="container footer__bottom">
-      <p>© 2026 Candy Lab · Barranquilla, Colombia</p>
-      <p>Fotos de demostración: Unsplash</p>
+    <div class="container footer__in">
+      <img class="footer__logo" src="assets/img/candy-lab-wordmark.png" alt="Candy Lab" width="480" height="277" loading="lazy">
+      <nav class="footer__nav" aria-label="Pie de página">
+        <a href="#favoritos">Tienda</a>
+        <a href="#encargos">Encargos</a>
+        <a href="#">Envíos</a>
+        <a href="#">Preguntas frecuentes</a>
+        <a href="#">Instagram</a>
+      </nav>
+      <p class="footer__note">© 2026 Candy Lab · Barranquilla, Colombia · Fotos de demostración: Unsplash</p>
     </div>
   </footer>
 
